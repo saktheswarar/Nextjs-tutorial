@@ -8,7 +8,7 @@ export const metadata ={
     description:'Find the perfect'
 }
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children }: { children: ReactNode }) => {
     return ( <html>
         <body>
             <Navbar/>
