@@ -1,7 +1,20 @@
-const PropertiesPage = ({ params, searchParams }) => {
-   
+import properties from '@/properties.json';
 
-return ( <div>Properties page {searchParams.name} </div> );
-}
- 
+const PropertiesPage = ({ params, searchParams }) => {
+    return (
+        <div>
+            <h1>Properties Page</h1>
+            {properties.length === 0 ? (
+                <p>No properties found</p>
+            ) : (
+                <ul>
+                    {properties.map((property) => (
+                        <li key={property._id}>{property._id}</li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+};
+
 export default PropertiesPage;
